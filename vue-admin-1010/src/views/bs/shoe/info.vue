@@ -222,9 +222,11 @@ export default {
         getVideo(){
             video.getVideo(this.shoeId)
                 .then(response =>{
-                    this.video = response.data.video
+                    if(response.data.video!=undefined){
+                        this.video = response.data.video
+                        this.fileList=[{name:this.video.videoOriginalName}]
+                    }
                     console.log(this.video)
-                    this.fileList=[{name:this.video.videoOriginalName}]
                 })
         },
         //根据商品id查询

@@ -34,7 +34,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="shoeName" label="商品名称" width="700" />
+      <el-table-column prop="shoeName" label="商品名称" width="500" />
 
       <el-table-column label="商品状态" width="80">
         <template slot-scope="scope">
@@ -42,7 +42,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="gmtCreate" label="添加时间" width="300"/>
+      <el-table-column prop="gmtCreate" label="添加时间" width="200"/>
 
       <el-table-column prop="viewCount" label="浏览数量" width="60" />
 
