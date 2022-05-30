@@ -89,6 +89,25 @@ export const asyncRoutes = [
         name: '添加商品分类',  
         component: () => import('@/views/bs/subject/save'),
         meta: { title: '添加商品分类', icon: 'nested' }
+      },
+      {
+        path: 'list1',
+        name: '商品分类(详情)',
+        component: () => import('@/views/bs/subject/list1'),
+        meta: { title: '厂商列表', icon: 'table'}
+      },
+      {
+        path: 'create',
+        name: '添加商品分类',
+        component: () => import('@/views/bs/subject/save1'),
+        meta: { title: '添加厂商' ,icon: 'user'}
+      },
+      {
+        path: 'edit/:id',
+        name: '编辑商品分类',
+        component: () => import('@/views/bs/subject/save1'),
+        meta: { title: '编辑厂商', noCache: true },
+        hidden: true
       }
     ]
   },

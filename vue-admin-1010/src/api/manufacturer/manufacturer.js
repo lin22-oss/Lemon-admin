@@ -10,7 +10,7 @@ export default {
             //data表示把对象转换json进行传递到接口里面
             data: manufacturerQuery
           })
-    },
+    }, 
     //删除讲师
     deleteManufacturerId(id) {
         return request({

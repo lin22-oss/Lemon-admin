@@ -292,7 +292,7 @@ export default {
         getOneSubject() {
             subject.getSubjectList()
                 .then(response => {
-                    this.subjectOneList = response.data.list
+                    this.subjectOneList = response.data.list 
                 })
         },
         //查询所有的厂商
