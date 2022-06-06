@@ -72,6 +72,28 @@ export const asyncRoutes = [
   },
 
   {
+    path: '/ucenter',
+    component: Layout,
+    redirect: '/ucenter/table',
+    name: 'ucenter',
+    meta: { title: '会员管理', icon: 'example' },
+    children: [
+      {
+        path: 'list',
+        name: 'ucenterList',
+        component: () => import('@/views/ucenter/list'),
+        meta: { title: '会员列表', icon: 'table'}
+      },
+      {
+        path: 'query/:id',
+        name: 'ucenterQuery',
+        component: () => import('@/views/ucenter/query'),
+        meta: { title: '会员详细信息', noCache: true }
+      }
+    ]
+  },
+
+  {
     path: '/subject',
     component: Layout,
     redirect: '/subject/list',

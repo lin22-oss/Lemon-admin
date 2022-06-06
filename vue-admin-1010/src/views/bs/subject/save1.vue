@@ -96,7 +96,18 @@ export default {
       });
     },
     saveOrUpdate() {
-      //判断修改还是添加
+      if (!this.subjectInfo.title) {
+        this.$message({
+          type: "error",
+          message: "分类名不能为空!",
+        });
+      }else if (!this.subjectInfo.parentId) {
+        this.$message({
+          type: "error",
+          message: "分类类别不能为空!",
+        });
+      }else{
+        //判断修改还是添加
       //根据subject是否有id
       if (!this.subjectInfo.id) {
         //添加
@@ -104,6 +115,7 @@ export default {
       } else {
         //修改
         this.updateSubject();
+      }
       }
     },
     //修改商品分类的方法
